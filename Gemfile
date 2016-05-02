@@ -5,5 +5,6 @@ group :development do
   gem 'kitchen-ansible'
   gem 'kitchen-vagrant'
   gem 'kitchen-ec2'
-  gem 'serverspec'
+  gem 'kitchen-verifier-serverspec'
+  gem 'ansible_spec'
 end

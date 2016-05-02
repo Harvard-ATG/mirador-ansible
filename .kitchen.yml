@@ -33,6 +33,8 @@ platforms:
     cache:
       auto_detect: true
       scope: ":box"
+  provisioner:
+    require_ansible_omnibus: true
 
 - name: bento-16.04
   driver_plugin: vagrant
