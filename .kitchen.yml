@@ -1,0 +1,40 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: ansible_playbook
+  roles_path: roles
+  hosts: mirador
+  require_ansible_repo: true
+  ansible_verbose: true
+  # ansible_version: latest
+  require_chef_for_busser: false
+  playbook: mirador.yml
+
+platforms:
+- name: ubuntu-14.04
+  driver_plugin: vagrant
+  driver_config:
+    box: "ubuntu/trusty64"
+    network:
+      - ["forwarded_port", {guest: 8000, host: 8000}]
+    cache:
+      auto_detect: true
+      scope: ":box"
+
+- name: ubuntu-16.04
+  driver_plugin: vagrant
+  driver_config:
+    box: "xenial64"
+    network:
+      - ["forwarded_port", {guest: 8000, host: 8000}]
+    cache:
+      auto_detect: true
+      scope: ":box"
+
+verifier:
+  ruby_bindir: '/usr/bin'
+
+suites:
+  - name: default

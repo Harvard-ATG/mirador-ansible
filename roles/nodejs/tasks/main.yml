@@ -1,0 +1,14 @@
+---
+- name: download nodejs lts
+  command: curl -LO https://nodejs.org/dist/v{{ node_version }}/{{ node }}.tar.xz
+  args:
+    chdir: "{{ lib }}"
+    creates: "{{ lib }}/{{ node }}.tar.xz"
+- name: extract node
+  unarchive: 
+    src: "{{ lib }}/{{ node }}.tar.xz"
+    dest: /usr/local/lib
+- name: add node bin dir to path
+  template:
+    src: nodepath.sh.j2
+    dest: /etc/profile.d/nodepath.sh

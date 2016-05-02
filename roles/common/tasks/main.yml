@@ -1,0 +1,12 @@
+---
+- name: upgrade apt packages
+  apt: upgrade=full update_cache=yes
+- name: install common packages
+  apt: name={{ item }}
+  with_items:
+    - curl
+- name: create common dirs
+  file: name={{ item }} state=directory
+  with_items:
+    - "{{ lib }}"
+    - "{{ mirador_src }}"

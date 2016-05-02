@@ -1,0 +1,31 @@
+I, [2016-04-29T14:57:36.704262 #15466]  INFO -- Kitchen: -----> Starting Kitchen (v1.7.1)
+E, [2016-04-29T14:57:36.704638 #15466] ERROR -- Kitchen: ------Exception-------
+E, [2016-04-29T14:57:36.704675 #15466] ERROR -- Kitchen: Class: Kitchen::UserError
+E, [2016-04-29T14:57:36.704704 #15466] ERROR -- Kitchen: Message: Kitchen YAML file /home/atg/Documents/mirador/ansible/roles/nodejs/.kitchen.yml does not exist.
+E, [2016-04-29T14:57:36.704733 #15466] ERROR -- Kitchen: ------Backtrace-------
+E, [2016-04-29T14:57:36.704761 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/test-kitchen-1.7.1/lib/kitchen/loader/yaml.rb:74:in `read'
+E, [2016-04-29T14:57:36.704790 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/test-kitchen-1.7.1/lib/kitchen/config.rb:149:in `data'
+E, [2016-04-29T14:57:36.704818 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/test-kitchen-1.7.1/lib/kitchen/config.rb:128:in `suites'
+E, [2016-04-29T14:57:36.704844 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/test-kitchen-1.7.1/lib/kitchen/config.rb:179:in `filter_instances'
+E, [2016-04-29T14:57:36.704872 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/test-kitchen-1.7.1/lib/kitchen/config.rb:138:in `build_instances'
+E, [2016-04-29T14:57:36.704899 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/test-kitchen-1.7.1/lib/kitchen/config.rb:114:in `instances'
+E, [2016-04-29T14:57:36.704927 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/test-kitchen-1.7.1/lib/kitchen/command.rb:115:in `filtered_instances'
+E, [2016-04-29T14:57:36.704988 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/test-kitchen-1.7.1/lib/kitchen/command.rb:145:in `parse_subcommand'
+E, [2016-04-29T14:57:36.705017 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/test-kitchen-1.7.1/lib/kitchen/command/action.rb:38:in `block in call'
+E, [2016-04-29T14:57:36.705047 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-04-29T14:57:36.705090 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/test-kitchen-1.7.1/lib/kitchen/command/action.rb:37:in `call'
+E, [2016-04-29T14:57:36.705136 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/test-kitchen-1.7.1/lib/kitchen/cli.rb:56:in `perform'
+E, [2016-04-29T14:57:36.705167 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/test-kitchen-1.7.1/lib/kitchen/cli.rb:180:in `block (2 levels) in <class:CLI>'
+E, [2016-04-29T14:57:36.705204 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'
+E, [2016-04-29T14:57:36.705233 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2016-04-29T14:57:36.705260 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/test-kitchen-1.7.1/lib/kitchen/cli.rb:321:in `invoke_task'
+E, [2016-04-29T14:57:36.705286 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'
+E, [2016-04-29T14:57:36.705312 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'
+E, [2016-04-29T14:57:36.705338 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/test-kitchen-1.7.1/bin/kitchen:13:in `block in <top (required)>'
+E, [2016-04-29T14:57:36.705364 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/test-kitchen-1.7.1/lib/kitchen/errors.rb:154:in `with_friendly_errors'
+E, [2016-04-29T14:57:36.705392 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/ruby-2.1.5/lib/ruby/gems/2.1.0/gems/test-kitchen-1.7.1/bin/kitchen:13:in `<top (required)>'
+E, [2016-04-29T14:57:36.705427 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/default/bin/kitchen:23:in `load'
+E, [2016-04-29T14:57:36.705455 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/default/bin/kitchen:23:in `<main>'
+E, [2016-04-29T14:57:36.705482 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/default/bin/ruby_executable_hooks:15:in `eval'
+E, [2016-04-29T14:57:36.705557 #15466] ERROR -- Kitchen: /home/atg/.rvm/rubies/default/bin/ruby_executable_hooks:15:in `<main>'
+E, [2016-04-29T14:57:36.705585 #15466] ERROR -- Kitchen: ----------------------
