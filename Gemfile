@@ -7,4 +7,5 @@ group :development do
   gem 'kitchen-ec2'
   gem 'guard'
   gem 'guard-kitchen', github: 'trickyearlobe/guard-kitchen', branch: 'support_guard_2'
+  gem 'serverspec'
 end

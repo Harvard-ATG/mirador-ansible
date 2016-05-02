@@ -26,15 +26,34 @@ platforms:
 - name: ubuntu-16.04
   driver_plugin: vagrant
   driver_config:
-    box: "xenial64"
+    box: xenial64
+    box_url: https://s3.amazonaws.com/atg-vagrant-boxes/xenial64.box
     network:
-      - ["forwarded_port", {guest: 8000, host: 8000}]
+      - ["forwarded_port", {guest: 8000, host: 8001}]
+    cache:
+      auto_detect: true
+      scope: ":box"
+
+- name: bento-16.04
+  driver_plugin: vagrant
+  driver_config:
+    box: bento/ubuntu-16.04;
+    network:
+      - ["forwarded_port", {guest: 8000, host: 8002}]
     cache:
       auto_detect: true
       scope: ":box"
 
 verifier:
-  ruby_bindir: '/usr/bin'
+  name: serverspec
+  sudo_path: true
 
 suites:
   - name: default
+    verifier:
+      patterns:
+        - roles/*/spec/spec.rb
+  - name: dev
+    driver_config:
+      synced_folders:
+        - ['src', '/srv/mirador']
