@@ -22,9 +22,9 @@ Uses Serverspec for testing.
 
 [Kitchen](https://github.com/test-kitchen/test-kitchen) is used to test and build local environments.
 
-Run `kitchen list` to see availabe build enviroments.
-Run `kitchen converge ENVROMENT_NAME` to build an environment
-Run `kitchen verify ENVROMENT_NAME` to build and test an enviroment.
+* Run `kitchen list` to see availabe build enviroments.
+* Run `kitchen converge ENVROMENT_NAME` to build an environment
+* Run `kitchen verify ENVROMENT_NAME` to build and test an enviroment.
 
 ### Port forwarding and derectory sharing.
 
