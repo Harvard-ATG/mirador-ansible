@@ -5,8 +5,10 @@
   apt: name={{ item }}
   with_items:
     - curl
+- name: create update Miridor user account
+  user: name={{ mirador_user }} state=present
 - name: create common dirs
-  file: name={{ item }} state=directory
+  file: name={{ item }} state=directory owner={{ mirador_user }}
   with_items:
     - "{{ lib }}"
     - "{{ mirador_src }}"

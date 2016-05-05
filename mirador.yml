@@ -2,8 +2,8 @@
 # This playbook deploys a simple standalone machine running mirador. 
 
 - hosts: mirador
-  remote_user: root
   vars:
+    - mirador_user: "{{ ansible_env.SUDO_USER }}"
     - mirador_version: v2.0.0
     - node_version: 4.4.3
     - node: "node-v{{ node_version }}-linux-x64"

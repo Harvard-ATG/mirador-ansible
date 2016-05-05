@@ -1,19 +1,10 @@
 ---
+- name: update npm to version 3.
+  npm: name=npm state=latest global=yes
 - name: install required npm packages
   npm: name={{ item }} global=yes state=present
   with_items:
     - grunt-cli
     - bower
-- name: get Mirador from source
-  git:
-    repo: https://github.com/IIIF/mirador.git
-    version: "{{ mirador_version }}"
-    dest: "{{ mirador_src }}"
-- name: get npm requirments
-  npm: "path={{ mirador_src }} state=present"
-- name: get bower packages
-  bower: "path={{ mirador_src }} state=present"
-- name: running grunt
-  command: grunt server &
-  args:
-    chdir: "{{ mirador_src }}"
+- include: aswebuser.yml
+  become_user: "{{ mirador_user }}"
